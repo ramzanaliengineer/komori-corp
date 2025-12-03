@@ -33,4 +33,7 @@ def contact(request):
 def services(request):
     return render(request,'services.html')
 
+
+def singleProductPage(request):
+    return render(request, "singleProduct.html")
     # return HttpResponse('This is a services page')
