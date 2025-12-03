@@ -1,107 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 {% load static %}
-<html>
-<head>
- <img src="{% static 'hhhh.jpeg' %}" class="d-block  w-500" alt="...">   
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title> Single Product </title>
+    <style type="text/css">
+        .img_clothes
+        {
+            float: left;
+            width: 50%;
+            margin-top: 1%;
+        }
+        .pos_cen
+        {
+            position: absolute;
+            width: 90%;
+            left: 10%;
+            top: 20%;
+            background-color: beige;
+            padding: 30px;
+            
+        }
+    </style>
+</head>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-.columns {
-  float: left;
-  width: 33.3%;
-  padding: 8px;
-}
-
-.price {
-  list-style-type: none;
-  border: 1px solid #eee;
+body {
   margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
-
-.price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-}
-
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
   text-align: center;
 }
 
-.price .grey {
-  background-color: #eeeeee;
-  font-size: 20px;
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
 }
 
-.button {
-  background-color: #04AA6D;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
+.content {
+  padding: 16px;
 }
 
-@media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
-  }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
 }
 </style>
 </head>
 <body>
 
-<h2 style="text-align:center">clothes price</h2>
-<p style="text-align:center">Soft and warm shawl perfect for winter.</p>
+<script>
+window.onscroll = function() {myFunction()};
 
-<div class="columns">
-  <ul class="price">
-    <li class="header">Pure Cotton</li>
-    <li class="grey">$ 99.99 / year</li>
-    <li>fabric</li>
-    <li>color</li>
-    <li>sizes</li>
-    <li>price</li>
-    <li class="grey"><a href="#" class="button">Sign Up</a></li>
-  </ul>
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="#">Komori Corp</a>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">nimal</a>
+          <a class="dropdown-item" href="#">niki</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">aura</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
+<div class="pos_cen">
+<img  class="img_clothes"  src="{% static 'hhhh.jpeg' %}" class="d-block w-50 my-4" alt="...">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vero ratione autem? Eligendi quasi aliquam libero laudantium voluptatem quos consectetur adipisicing elit consectetur adipisicing elit,</br> inventore quod vitae consectetur nihil maiores incidunt ut optio, asperiores quisquam! consectetur adipisicing.</p>
 </div>
-
-<div class="columns">
-  <ul class="price">
-    <li class="header" style="background-color:#04AA6D">Winter Wool Shawl</li>
-    <li class="grey">$ 242.99 / year</li>
-    <li>Premium Wool</li>
-    <li>Maroon</li>
-    <li>Free Size</li>
-    <li>3200</li>
-    <li class="grey"><a href="#" class="button">Sign Up</a></li>
-  </ul>
-</div>
-
-<div class="columns">
-  <ul class="price">
-    <li class="header">Sky Blue</li>
-    <li class="grey">$ 349.99 / year</li>
-    <li>Pure Cotton</li>
-    <li>Sky Blue</li>
-    <li>S,M,L</li>
-    <li>2450</li>
-    <li class="grey"><a href="#" class="button">Sign Up</a></li>
-  </ul>
-</div>
-
 </body>
 </html>
