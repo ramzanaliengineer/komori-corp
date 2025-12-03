@@ -44,167 +44,186 @@
 </div>
 </div>
 
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروڈکٹ گیلری</title>
+    <!-- Bootstrap CSS CDN لنک شامل کریں -->
+    <link href="cdn.jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        /* تمام کارڈ امیجز کے لیے ایک مخصوص اونچائی سیٹ کریں تاکہ وہ ایک سیدھ میں رہیں */
+        .card img {
+            height: 250px; /* اپنی مرضی کے مطابق اونچائی ایڈجسٹ کریں */
+            object-fit: cover; /* تصویر کو اس اونچائی میں صحیح سے فٹ کرنے کے لیے */
+            width: 100%; /* تصویر کو کارڈ کی مکمل چوڑائی دینے کے لیے */
+        }
+        /* بٹن لنکس کے لیے اضافی اسٹائلنگ تاکہ ٹیکسٹ صحیح نظر آئے */
+        .btn-outline-secondary a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- یہاں سے آپ کا دیا ہوا کوڈ شروع ہو رہا ہے -->
     <div class="container">
-      <h1 class="my-2 text-center">Select from our range of clothes</h1>
+        <!-- dir="ltr" شامل کیا ہے تاکہ انگریزی متن صحیح ترتیب سے نظر آئے -->
+        <h1 class="my-2 text-center" dir="ltr">Select from our range of clothes</h1> 
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b>Edit Order</b></button> -->
+        <div class="row">
+            <!-- پروڈکٹ کارڈ 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hh.jpg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="Product Image 1">
+                    <div class="card-body">
+                        <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
                 </div>
-                <small class="text-muted">*****</small>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hhhh.jpeg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>Discover how the right fabric and silhouette can completely transform your day. Explore the curated pieces designed to make you feel unstoppable.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b> Edit Order</b></button> -->
-                </div>
-                <small class="text-muted">*****</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>Discover how the right fabric and silhouette can completely transform your day. Explore the curated pieces designed to make you feel unstoppable.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b> Edit Order</b></button> -->
-                </div>
-                <small class="text-muted">*****</small>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b> Edit Order</b></button> -->
+            <!-- پروڈکٹ کارڈ 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hhhh.jpeg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hhhh.jpeg' %}" class="d-block w-100" alt="Product Image 2">
+                    <div class="card-body">
+                        <p class="card-text"><b>Discover how the right fabric and silhouette can completely transform your day. Explore the curated pieces designed to make you feel unstoppable.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
                 </div>
-                <small class="text-muted">*****</small>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hhhh.jpeg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b> Edit Order</b></button> -->
-                </div>
-                <small class="text-muted">*****</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b> Edit Order</b></button> -->
-                </div>
-                <small class="text-muted">*****</small>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b>Edit Order</b></button> -->
+            <!-- پروڈکٹ کارڈ 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hh.jpg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="Product Image 3">
+                    <div class="card-body">
+                        <p class="card-text"><b>Discover how the right fabric and silhouette can completely transform your day. Explore the curated pieces designed to make you feel unstoppable.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
                 </div>
-                <small class="text-muted">*****</small>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hhhh.jpeg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b>Edit Order</b></button> -->
+            
+            <!-- پروڈکٹ کارڈ 4 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hh.jpg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="Product Image 4">
+                    <div class="card-body">
+                        <p class="card-text"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
                 </div>
-                <small class="text-muted">*****</small>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="...">
-            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
-            <div class="card-body">
-              <p class="card-text"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><b>View Product</button>
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><b>Edit Order</b></button> -->
+
+            <!-- پروڈکٹ کارڈ 5 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hhhh.jpeg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hhhh.jpeg' %}" class="d-block w-100" alt="Product Image 5">
+                    <div class="card-body">
+                        <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
                 </div>
-                <small class="text-muted">*****</small>
-              </div>
             </div>
-          </div>
+        <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hhhh.jpeg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="Product Image 5">
+                    <div class="card-body">
+                        <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hhhh.jpeg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="Product Image 5">
+                    <div class="card-body">
+                        <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hhhh.jpeg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hhhh.jpeg' %}" class="d-block w-100" alt="Product Image 5">
+                    <div class="card-body">
+                        <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- پروڈکٹ کارڈ 6 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <!-- {% static 'hh.jpg' %} کی جگہ اصل تصویر کا لنک ڈالیں -->
+                    <img src="{% static 'hh.jpg' %}" class="d-block w-100" alt="Product Image 6">
+                    <div class="card-body">
+                        <p class="card-text"><b>Dive into our latest collection and explore the trends defining this season. Your perfect fit awaits within this curated selection.</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><b><a href="/singleProduct">View Product</a></b></button>
+                            </div>
+                            <small class="text-muted">*****</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
     </div>
-  </div>
+    <!-- یہاں آپ کا دیا ہوا کوڈ ختم ہو گیا -->
 
-</main>
-
-<footer class="text-muted">
-  <div class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
+    <!-- Bootstrap JS bundles شامل کریں (اختیاری، اگر آپ JS فنکشنلٹی چاہتے ہیں) -->
+    <script src="cdn.jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9fTQ7CQxWkO1LHWu5iT6u/2" crossorigin="anonymous"></script>
     {% comment %} <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p> {% endcomment %}
     {% comment %} <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p> {% endcomment %}
   </div>
