@@ -38,5 +38,3 @@ def singleProductPage(request):
     return render(request, "singleProduct.html")
     # return HttpResponse('This is a services page')
 
-def mulipleproduct(request):
-    return render(request,"multipleproduct.html")
