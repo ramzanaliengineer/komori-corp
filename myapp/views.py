@@ -34,8 +34,8 @@ def services(request):
     return render(request,'services.html')
 
 
-# def singleProductPage(request):
-#     return render(request, "singleProduct.html")
+def singleProductPage(request):
+    return render(request, "singleProduct.html")
 #     # return HttpResponse('This is a services page')
 
 # def single_product(request, id):
@@ -48,11 +48,6 @@ def services(request):
 #     })
 
 
-from django.shortcuts import render
-from .models import Product
 
-def single_product(request, pk):
-    product = Product.objects.get(id=pk)
-    return render(request, "single_product.html", {"product": product})
 
 
