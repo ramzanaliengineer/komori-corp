@@ -34,11 +34,11 @@ def services(request):
     return render(request,'services.html')
 
 
-def singleProductPage(request):
-    return render(request, "singleProduct.html")
+# def singleProductPage(request):
+#     return render(request, "singleProduct.html")
 
 def Helloproduct(request):
-    return render(request,"Helloproduct")
+    return render(request,"Helloproduct.html")
 #     # return HttpResponse('This is a services page')
 
 # def single_product(request, id):
