@@ -39,8 +39,8 @@ def services(request):
 #     # return HttpResponse('This is a services page')
 
 def single_product(request, id):
-    product = Product.objects.get(id=id)
-    relevant = RelevantImages.objects.filter(product=product)
+    product = request.objects.get(id=id)
+    relevant = request.objects.filter(product=product)
 
     return render(request, "singleproduct.html", {
         "product": product,
