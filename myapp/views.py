@@ -36,6 +36,9 @@ def services(request):
 
 def singleProductPage(request):
     return render(request, "singleProduct.html")
+
+def Helloproduct(request):
+    return render(request,"Helloproduct")
 #     # return HttpResponse('This is a services page')
 
 # def single_product(request, id):
